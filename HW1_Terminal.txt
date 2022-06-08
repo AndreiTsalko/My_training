@@ -1,0 +1,42 @@
+1. Посмотреть где я нахожусь -pwd
+2. Создать папку где находишься - mkdir foldername
+3. зайти в папку в том каталоге где находишься - cd foldername
+4. Создать 3 папки - mkdir foldername1 foldername2 foldername3
+5. зайти в нужную папку - cd "путь к папке" мой варик такой cd d:/V_Ksendzov_Course_QA/Group_29/lesson1.1
+6. Создать 5 файлов в данной папке(3 txt json,2 json) - touch filename1.txt filename2.txt filename3.txt filename_1.json filename_2.json
+7. Создать 3 папки - mkdir foldername4 foldername5 foldername6
+8. Вывести список содержимого папки - ls -la
+9. Открыть любой txt файл - vim filename.txt
+10. + написать туда что-нибудь - нажимать в открывшемся текстовом редакторе "i" и ввести любой текст
+11. + сохранить и выйти - после того как сделали все что надо сделали нажать "esc" чтобы выйти из режима редактировани, и ввести ":wq" нажать enter
+12. выйти из папки на уровень выше - cd ..
+13. переместить любые 2 файла которые вы создали, в любую папку - mv foldername/{filename1.txt,filename2.txt} foldername1/
+14. скопировать любые 2 файла, которые вы создали в любую другую папку - cp foldername/{filename1.txt,filename2.txt} foldername1/
+15. найти файл по имени - find filename1.txt
+16. просмотреть содержимое в реальном времени - tail -f filename.txt
+17. вывести несколько первых строк из текствового редактора - head -4 filename.txt
+18. вывести несколько последних строк из текстового редактора - tail -4 filename.txt
+19. просмотр содержимого длинного файла (команда less) - less filename.txt
+20. вывести дату и время - date
+
+звездочка* =)
+
+1. Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request -
+ curl http://162.55.220.72:5005/terminal-hw-request в пришедшем ответе надо внести данные чтобы отправить запрос
+curl 'http://162.55.220.72:5005/get_method?name=Andrei&age=33'
+
+2. Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+touch script_HW1.Terminal.sh
+nano script_HW1.Terminal.sh
+#!/bin/bash
+cd folder1_1
+mkdir terminal_1 terminal_2 terminal_3
+cd terminal_1
+touch QA_1.txt QA_2.txt QA_3.txt QA_1.json QA_2.json
+mkdir course_1 course_2 course_3
+ls -la
+mv QA_1.txt QA_1.json course_1/
+ctrl+x
+y
+
+bash script_HW1.Terminal.sh
